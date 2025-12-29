@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 19th Birthday, Leo!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #000000, #4a0e4e, #1e3a8a, #7c3aed);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            animation: fadeIn 2s ease-in-out;
+            backdrop-filter: blur(10px);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            font-size: 3em;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .letter {
+            background: linear-gradient(45deg, #2d1b69, #11998e);
+            padding: 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 20px 0;
+        }
+        .letter:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .message {
+            display: none;
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #f8f9fa;
+            margin-top: 20px;
+            animation: slideIn 1s ease-out;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .heart {
+            font-size: 2em;
+            color: #e17055;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .sparkle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            animation: sparkle 2s infinite;
+        }
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="sparkle" style="top: 20%; left: 20%;"></div>
+    <div class="sparkle" style="top: 50%; left: 70%;"></div>
+    <div class="sparkle" style="top: 80%; left: 40%;"></div>
+    <div class="container">
+        <h1>Happy 19th Birthday, Leo! 🎉</h1>
+        <p>From your dearest Ayna, with all my love. <span class="heart">❤️</span></p>
+        <div class="letter" onclick="openMessage()">
+            <h2>Click to Open the Letter</h2>
+            <p>✉️ A special message just for you...</p>
+        </div>
+        <div class="message" id="message">
+            <p>Dear Leo,</p>
+            <p>On your 19th birthday, I want to wish you all the happiness in the world. May this year bring you endless adventures, deep love, and dreams that come true. You're the light of my life, and I pray for your health, success, and joy in every step you take. I love you more than words can say.</p>
+            <p>With all my heart,<br>Ayna</p>
+        </div>
+    </div>
+
+    <script>
+        function openMessage() {
+            const message = document.getElementById('message');
+            message.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
